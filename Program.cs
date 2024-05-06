@@ -5,6 +5,10 @@ namespace CS_youtube_kurs
 {
     class Program
     {
+        public static float Sum (int x, float y)
+        {
+            return(x + y);
+        }
         static void Main()
         {
             sbyte a = -128;     //range -128 to 127                         8-bit
@@ -17,8 +21,30 @@ namespace CS_youtube_kurs
             float h = -4.5345f;
             double j = 5.324d;
 
+            char symbol = 'A';
+            bool isFirst = false;
             string str = "Variables: ";
             Console.WriteLine(str+a+", "+ b + ", "+c + ", "+d + ", "+e + ", "+f + ", "+g + ", "+h + ", "+j);
+            //Console.ReadKey();
+
+
+            //int num_1 = 0, num_2 = 0;
+            //int num_1, num_2;
+
+            int num_1=Convert.ToInt32(Console.ReadLine())*2;
+            //num_1 = num_1*2;
+            //num_1 *= 2;
+
+           //float num_2 = (float)Convert.ToDouble(Console.ReadLine());
+           float num_2=float.Parse(Console.ReadLine())+10f;
+            Console.WriteLine(Sum(num_1, num_2));
+            //Console.ReadKey();
+
+
+            Console.WriteLine(Math.Abs(-20));
+            Console.WriteLine(Math.Ceiling(4.11f));
+            Console.WriteLine(Math.Floor(4.99f));
+            Console.WriteLine(Math.Round(4.56f));
             Console.ReadKey();
         }
     }
