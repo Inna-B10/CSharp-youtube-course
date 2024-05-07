@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 
 
 namespace CS_youtube_kurs
@@ -9,7 +10,7 @@ namespace CS_youtube_kurs
         {
             return(x + y);
         }
-        static void Main()
+        public static void Variables()
         {
             sbyte a = -128;     //range -128 to 127                         8-bit
             byte b = 255;       //range 0 to 255                            8-bit
@@ -24,31 +25,51 @@ namespace CS_youtube_kurs
             char symbol = 'A';
             bool isFirst = false;
             string str = "Variables: ";
-            Console.WriteLine(str+a+", "+ b + ", "+c + ", "+d + ", "+e + ", "+f + ", "+g + ", "+h + ", "+j);
-
-
+            Console.WriteLine(str + a + ", " + b + ", " + c + ", " + d + ", " + e + ", " + f + ", " + g + ", " + h + ", " + j);
+        }
+        public static void ReadInput()
+        {
             //варианты написания оглашения переменных
             //int num_1 = 0, num_2 = 0;
             //int num_1, num_2;
 
-            int num_1=Convert.ToInt32(Console.ReadLine())*2;
+            Console.WriteLine("Input int number (целое число)");
+            int num_1 = Convert.ToInt32(Console.ReadLine()) * 2;
             //варианты написания
             //num_1 = num_1*2;
             //num_1 *= 2;
 
-           //float num_2 = (float)Convert.ToDouble(Console.ReadLine()); //как вариант след.строки
-           float num_2=float.Parse(Console.ReadLine())+10f;
-           // Console.WriteLine(Sum(num_1, num_2));
+            Console.WriteLine("Input float number (число с запятой)");
+            float num_2 = (float)Convert.ToDouble(Console.ReadLine());
+            //float num_2 = float.Parse(Console.ReadLine()) + 10f;      //как вариант пред.строки
+            Console.WriteLine(Sum(num_1, num_2));
+        }
+        public static void MathFunctions()
+        {
+            Console.WriteLine("Absolute of -20 is: " + Math.Abs(-20));          //20
+            Console.WriteLine("Ceiling of 4.11 is: " + Math.Ceiling(4.11f));    //5 к большему
+            Console.WriteLine("Floor of 4.99 is: " + Math.Floor(4.99f));        //4 к меньшему
+            Console.WriteLine("Round of 4.56 is: " + Math.Round(4.56f));        //5 по правилам
 
-            Console.WriteLine(Math.Abs(-20));           //20
-            Console.WriteLine(Math.Ceiling(4.11f));     //5 к большему
-            Console.WriteLine(Math.Floor(4.99f));       //4 к меньшему
-            Console.WriteLine(Math.Round(4.56f));       //5 по правилам
+            Console.WriteLine("Min (5,0) is: " + Math.Min(5, 0));
+            Console.WriteLine("Max(-15,56) is: " + Math.Max(-15, 56));
+            Console.WriteLine("Pow(5, 3) is: " + Math.Pow(5, 3));               //степень 5*5*5=125
+            Console.WriteLine("PI is: " + Math.PI);                             //3,14....
+        }
 
-            Console.WriteLine(Math.Min(5, 0));
-            Console.WriteLine(Math.Max(-15, 56));
-            Console.WriteLine(Math.Pow(5, 3));          //степень 5*5*5=125
-            Console.WriteLine(Math.PI);                 //3,14....
+        static void Main()
+        {
+
+            Variables();
+            ReadInput();
+            MathFunctions();
+
+
+
+
+
+
+
             Console.ReadKey();
         }
     }
