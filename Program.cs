@@ -142,6 +142,17 @@ namespace CS_youtube_kurs
                 Console.WriteLine("Number {0} is even", a);
             }
         }
+        public static string UserInputString ()
+        {
+            Console.WriteLine("Input some text:");
+            string user_input = Console.ReadLine();
+            return user_input;
+        }
+        public static string ShowName(string name)
+        {
+            //Console.WriteLine("The text user has entered is: "+name);
+            return "The text user has entered is: "+name;
+        }
 
         static void Main()
         {
@@ -151,8 +162,14 @@ namespace CS_youtube_kurs
             //AreaCircle();
             //UpdateUserData();
             //UserPermissions();
-            Cycles();
+            //Cycles();
 
+            string user_input = UserInputString();
+            string text = ShowName(user_input);
+            Console.WriteLine(text);
+             
+            
+            
 
 
             Console.ReadKey();
