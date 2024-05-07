@@ -25,26 +25,30 @@ namespace CS_youtube_kurs
             bool isFirst = false;
             string str = "Variables: ";
             Console.WriteLine(str+a+", "+ b + ", "+c + ", "+d + ", "+e + ", "+f + ", "+g + ", "+h + ", "+j);
-            //Console.ReadKey();
 
 
+            //варианты написания оглашения переменных
             //int num_1 = 0, num_2 = 0;
             //int num_1, num_2;
 
             int num_1=Convert.ToInt32(Console.ReadLine())*2;
+            //варианты написания
             //num_1 = num_1*2;
             //num_1 *= 2;
 
-           //float num_2 = (float)Convert.ToDouble(Console.ReadLine());
+           //float num_2 = (float)Convert.ToDouble(Console.ReadLine()); //как вариант след.строки
            float num_2=float.Parse(Console.ReadLine())+10f;
-            Console.WriteLine(Sum(num_1, num_2));
-            //Console.ReadKey();
+           // Console.WriteLine(Sum(num_1, num_2));
 
+            Console.WriteLine(Math.Abs(-20));           //20
+            Console.WriteLine(Math.Ceiling(4.11f));     //5 к большему
+            Console.WriteLine(Math.Floor(4.99f));       //4 к меньшему
+            Console.WriteLine(Math.Round(4.56f));       //5 по правилам
 
-            Console.WriteLine(Math.Abs(-20));
-            Console.WriteLine(Math.Ceiling(4.11f));
-            Console.WriteLine(Math.Floor(4.99f));
-            Console.WriteLine(Math.Round(4.56f));
+            Console.WriteLine(Math.Min(5, 0));
+            Console.WriteLine(Math.Max(-15, 56));
+            Console.WriteLine(Math.Pow(5, 3));          //степень 5*5*5=125
+            Console.WriteLine(Math.PI);                 //3,14....
             Console.ReadKey();
         }
     }
