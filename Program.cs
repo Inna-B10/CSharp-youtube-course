@@ -102,6 +102,46 @@ namespace CS_youtube_kurs
                     break;
             }
         }
+        public static void Cycles()
+        {
+            Console.WriteLine("Cycle for:");
+            for (float i = 50; i> 10; i /= 2)
+            {
+                Console.WriteLine("Element: {0}", i);
+            }
+            Console.WriteLine("\nCycle while:");
+            byte j = 5;
+            while(j >=1)
+            {
+                Console.WriteLine("Element: " + j);
+                j--;
+            }
+            bool isHasCar = true;
+            while(isHasCar)
+            {   
+                Console.WriteLine("\ninput some text, to end the cycle type: stop");
+                string? end = Console.ReadLine();
+                if (end == "stop")
+                {
+                    isHasCar = false;
+                }
+            }
+            Console.WriteLine("\nCycle do-while:");
+            byte k = 100;
+            do
+            {
+                Console.WriteLine("Element: " + k);
+            }
+            while (k<10);
+
+            Console.WriteLine("\nbreak, continue:");
+            for(short a = 0; a < 10; a++) {
+                if (a > 5) break;
+                Console.WriteLine("El: " + a);
+                if (a % 2 != 0) continue;
+                Console.WriteLine("Number {0} is even", a);
+            }
+        }
 
         static void Main()
         {
@@ -110,7 +150,8 @@ namespace CS_youtube_kurs
             //MathFunctions();
             //AreaCircle();
             //UpdateUserData();
-            UserPermissions();
+            //UserPermissions();
+            Cycles();
 
 
 
