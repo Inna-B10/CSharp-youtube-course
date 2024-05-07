@@ -150,8 +150,43 @@ namespace CS_youtube_kurs
         }
         public static string ShowName(string name)
         {
-            //Console.WriteLine("The text user has entered is: "+name);
             return "The text user has entered is: "+name;
+        }
+        public static void TestArrays()
+        { 
+            //string[] strArray2 = ["Monday", "Wednesday", "Saturday"];
+            //string[] strArray3 = new string[] { "Monday", "Wednesday", "Saturday" };
+            string[] strArray = { "Monday", "Wednesday", "Saturday" };
+            Console.WriteLine(strArray[0]+"\n");
+
+            for (int i = 0; i < strArray.Length; i++)
+            {
+                Console.Write(strArray[i] + "\n");
+            }
+
+            int[] countChars = new int[strArray.Length];
+            for (int i = 0;i < countChars.Length; i++)
+            {
+                countChars[i] = strArray[i].Length;
+                Console.WriteLine(countChars[i]); 
+            }
+            Console.WriteLine();
+            //byte[] nums = new byte[4];
+            //nums[0] = 7;
+            //nums[1] = 22;
+            //nums[2] = 126;
+            //nums[3] = 213;
+            byte[] nums = [7, 22, 126, 213];
+
+
+        }
+        public static void LoopArray<T>(T[] someData)
+        {
+            foreach (T item in someData)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
         }
 
         static void Main()
@@ -164,12 +199,21 @@ namespace CS_youtube_kurs
             //UserPermissions();
             //Cycles();
 
-            string user_input = UserInputString();
-            string text = ShowName(user_input);
-            Console.WriteLine(text);
-             
-            
-            
+            //string user_input = UserInputString();
+            //string text = ShowName(user_input);
+            //Console.WriteLine(text);
+
+            //TestArrays();
+
+            // ѕример использовани€ метода LoopArray с массивом строк
+            string[] stringArray = { "apple", "banana", "orange" };
+            LoopArray(stringArray);
+
+            // ѕример использовани€ метода LoopArray с массивом целых чисел
+            int[] intArray = { 1, 2, 3, 4, 5 };
+            LoopArray(intArray);
+
+
 
 
             Console.ReadKey();
