@@ -203,6 +203,24 @@ namespace CS_youtube_kurs
             }
             Console.WriteLine("Sum: " +sum);
         }
+        public static void nestedArray() {
+            char[,] symbols = new char[2, 3];
+            symbols[0, 0] = 'a';
+
+            int[,] symbols2 = {
+                {14, 65,71 },
+                {43,52,3 },
+                {24,13,37 }
+            };
+
+            symbols2[1, 2] = 0;
+            ////for()
+            //    //for()
+            foreach (short el in symbols2)
+            {
+                Console.WriteLine("El: " + el);
+            }
+        }
 
         static void Main()
         {
@@ -230,19 +248,8 @@ namespace CS_youtube_kurs
             //--------------------------------------------------------------------------
 
             //двухмерные массивы:
-            //char[,] symbols = new char[2, 3];
-            //symbols[0, 0]= 'a';
+            nestedArray();
 
-            //int[,] symbols2 = {
-            //    {4, 6,7 },
-            //    {5,7,3 },
-            //    {3,3,2 }
-            //};
-
-            //symbols2[1, 2] = 56;
-            ////for()
-            //    //for()
-            //--------------------------------------------------------------------------
 
 
 
