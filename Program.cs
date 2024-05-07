@@ -63,53 +63,16 @@ namespace CS_youtube_kurs
             double area = Math.PI * Math.Pow(radius, 2);
             Console.WriteLine("Area of the circle with radius {0} is {1}", radius, area);
         }
-        public static void UpdateUserData()
-        {
-            Console.Write("Enter level: ");
-            string? role = Console.ReadLine();
-
-        if (role == "admin")
-            {
-                Console.Write("Enter user name: ");
-                string? user_name = Console.ReadLine();
-                Console.Write("Enter {0}'s age: ", user_name);
-                short age = Convert.ToInt16(Console.ReadLine());
-                Console.WriteLine("{0}'s age is: {1}", user_name, age);
-            }
-            else
-            {
-                Console.WriteLine("You have not permission to do changes");
-            }
-        }
-        public static void UserPermissions()
-        {
-            Console.Write("Choose your level (admin/editor/user): ");
-            string? level= Console.ReadLine();
-
-            switch (level)
-            {
-                case "admin":
-                    Console.WriteLine("{0} can view, comment, edit, delete or create new", level);
-                    break;
-                case "editor":
-                    Console.WriteLine("{0} can view, comment and edit", level);
-                    break ;
-                case "user":
-                    Console.WriteLine("{0} can view and comment");
-                    break;
-                default: Console.WriteLine("Unrecognized level");
-                    break;
-            }
-        }
 
         static void Main()
         {
-            //Variables();
-            //ReadInput();
-            //MathFunctions();
-            //AreaCircle();
-            //UpdateUserData();
-            UserPermissions();
+            Variables();
+            ReadInput();
+            MathFunctions();
+            AreaCircle();
+
+
+
 
 
 
