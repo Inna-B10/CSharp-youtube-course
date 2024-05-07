@@ -6,9 +6,9 @@ namespace CS_youtube_kurs
 {
     class Program
     {
-        public static float Sum (int x, float y)
+        public static float Sum(int x, float y)
         {
-            return(x + y);
+            return (x + y);
         }
         public static void Variables()
         {
@@ -68,7 +68,7 @@ namespace CS_youtube_kurs
             Console.Write("Enter level: ");
             string? role = Console.ReadLine();
 
-        if (role == "admin")
+            if (role == "admin")
             {
                 Console.Write("Enter user name: ");
                 string? user_name = Console.ReadLine();
@@ -81,6 +81,27 @@ namespace CS_youtube_kurs
                 Console.WriteLine("You have not permission to do changes");
             }
         }
+        public static void UserPermissions()
+        {
+            Console.Write("Choose your level (admin/editor/user): ");
+            string? level = Console.ReadLine();
+
+            switch (level)
+            {
+                case "admin":
+                    Console.WriteLine("{0} can view, comment, edit, delete or create new", level);
+                    break;
+                case "editor":
+                    Console.WriteLine("{0} can view, comment and edit", level);
+                    break;
+                case "user":
+                    Console.WriteLine("{0} can view and comment");
+                    break;
+                default:
+                    Console.WriteLine("Unrecognized level");
+                    break;
+            }
+        }
 
         static void Main()
         {
@@ -88,10 +109,8 @@ namespace CS_youtube_kurs
             //ReadInput();
             //MathFunctions();
             //AreaCircle();
-            UpdateUserData();
-
-
-
+            //UpdateUserData();
+            UserPermissions();
 
 
 
