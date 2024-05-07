@@ -188,6 +188,21 @@ namespace CS_youtube_kurs
             }
             Console.WriteLine();
         }
+        public static void RandomArray ()
+        {
+            short[] numbers = new short[10];
+            short sum = 0;
+
+            Random random = new Random();
+            for(byte i=0; i<numbers.Length; i++)
+            {
+                numbers[i] = Convert.ToInt16(random.Next(-15, 15));
+                Console.WriteLine("el: " + numbers[i]);
+
+                sum += numbers[i];
+            }
+            Console.WriteLine("Sum: " +sum);
+        }
 
         static void Main()
         {
@@ -206,12 +221,13 @@ namespace CS_youtube_kurs
             //TestArrays();
 
             // ѕример использовани€ метода LoopArray с массивом строк
-            string[] stringArray = { "apple", "banana", "orange" };
-            LoopArray(stringArray);
-
+            //string[] stringArray = { "apple", "banana", "orange" };
+            //LoopArray(stringArray);
             // ѕример использовани€ метода LoopArray с массивом целых чисел
-            int[] intArray = { 1, 2, 3, 4, 5 };
-            LoopArray(intArray);
+            //int[] intArray = { 1, 2, 3, 4, 5 };
+            //LoopArray(intArray);
+
+            RandomArray();
 
 
 
