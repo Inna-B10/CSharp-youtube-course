@@ -56,14 +56,20 @@ namespace CS_youtube_kurs
             Console.WriteLine("Pow(5, 3) is: " + Math.Pow(5, 3));               //степень 5*5*5=125
             Console.WriteLine("PI is: " + Math.PI);                             //3,14....
         }
+        public static void AreaCircle()
+        {
+            Console.WriteLine("Input radius (float num): ");
+            double radius = Convert.ToDouble(Console.ReadLine());
+            double area = Math.PI * Math.Pow(radius, 2);
+            Console.WriteLine("Area of the circle with radius {0} is {1}", radius, area);
+        }
 
         static void Main()
         {
-
             Variables();
             ReadInput();
             MathFunctions();
-
+            AreaCircle();
 
 
 
