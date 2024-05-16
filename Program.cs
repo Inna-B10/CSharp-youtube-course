@@ -29,31 +29,31 @@ namespace CS_youtube_kurs
         }
         public static void ReadInput()
         {
-            //âàðèàíòû íàïèñàíèÿ îãëàøåíèÿ ïåðåìåííûõ
+            //Ð²Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð½Ð°Ð¿Ð¸ÑÐ°Ð½Ð¸Ñ Ð¾Ð³Ð»Ð°ÑˆÐµÐ½Ð¸Ñ Ð¿ÐµÑ€ÐµÐ¼ÐµÐ½Ð½Ñ‹Ñ…
             //int num_1 = 0, num_2 = 0;
             //int num_1, num_2;
 
-            Console.WriteLine("Input int number (öåëîå ÷èñëî)");
+            Console.WriteLine("Input int number (Ñ†ÐµÐ»Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾)");
             int num_1 = Convert.ToInt32(Console.ReadLine()) * 2;
-            //âàðèàíòû íàïèñàíèÿ
+            //Ð²Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð½Ð°Ð¿Ð¸ÑÐ°Ð½Ð¸Ñ
             //num_1 = num_1*2;
             //num_1 *= 2;
 
-            Console.WriteLine("Input float number (÷èñëî ñ çàïÿòîé)");
+            Console.WriteLine("Input float number (Ñ‡Ð¸ÑÐ»Ð¾ Ñ Ð·Ð°Ð¿ÑÑ‚Ð¾Ð¹)");
             float num_2 = (float)Convert.ToDouble(Console.ReadLine());
-            //float num_2 = float.Parse(Console.ReadLine()) + 10f;      //êàê âàðèàíò ïðåä.ñòðîêè
+            //float num_2 = float.Parse(Console.ReadLine()) + 10f;      //ÐºÐ°Ðº Ð²Ð°Ñ€Ð¸Ð°Ð½Ñ‚ Ð¿Ñ€ÐµÐ´.ÑÑ‚Ñ€Ð¾ÐºÐ¸
             Console.WriteLine(Sum(num_1, num_2));
         }
         public static void MathFunctions()
         {
             Console.WriteLine("Absolute of -20 is: " + Math.Abs(-20));          //20
-            Console.WriteLine("Ceiling of 4.11 is: " + Math.Ceiling(4.11f));    //5 ê áîëüøåìó
-            Console.WriteLine("Floor of 4.99 is: " + Math.Floor(4.99f));        //4 ê ìåíüøåìó
-            Console.WriteLine("Round of 4.56 is: " + Math.Round(4.56f));        //5 ïî ïðàâèëàì
+            Console.WriteLine("Ceiling of 4.11 is: " + Math.Ceiling(4.11f));    //5 Ðº Ð±Ð¾Ð»ÑŒÑˆÐµÐ¼Ñƒ
+            Console.WriteLine("Floor of 4.99 is: " + Math.Floor(4.99f));        //4 Ðº Ð¼ÐµÐ½ÑŒÑˆÐµÐ¼Ñƒ
+            Console.WriteLine("Round of 4.56 is: " + Math.Round(4.56f));        //5 Ð¿Ð¾ Ð¿Ñ€Ð°Ð²Ð¸Ð»Ð°Ð¼
 
             Console.WriteLine("Min (5,0) is: " + Math.Min(5, 0));
             Console.WriteLine("Max(-15,56) is: " + Math.Max(-15, 56));
-            Console.WriteLine("Pow(5, 3) is: " + Math.Pow(5, 3));               //ñòåïåíü 5*5*5=125
+            Console.WriteLine("Pow(5, 3) is: " + Math.Pow(5, 3));               //ÑÑ‚ÐµÐ¿ÐµÐ½ÑŒ 5*5*5=125
             Console.WriteLine("PI is: " + Math.PI);                             //3,14....
         }
         public static void AreaCircle()
@@ -105,20 +105,20 @@ namespace CS_youtube_kurs
         public static void Cycles()
         {
             Console.WriteLine("Cycle for:");
-            for (float i = 50; i> 10; i /= 2)
+            for (float i = 50; i > 10; i /= 2)
             {
                 Console.WriteLine("Element: {0}", i);
             }
             Console.WriteLine("\nCycle while:");
             byte j = 5;
-            while(j >=1)
+            while (j >= 1)
             {
                 Console.WriteLine("Element: " + j);
                 j--;
             }
             bool isHasCar = true;
-            while(isHasCar)
-            {   
+            while (isHasCar)
+            {
                 Console.WriteLine("\ninput some text, to end the cycle type: stop");
                 string? end = Console.ReadLine();
                 if (end == "stop")
@@ -132,17 +132,18 @@ namespace CS_youtube_kurs
             {
                 Console.WriteLine("Element: " + k);
             }
-            while (k<10);
+            while (k < 10);
 
             Console.WriteLine("\nbreak, continue:");
-            for(short a = 0; a < 10; a++) {
+            for (short a = 0; a < 10; a++)
+            {
                 if (a > 5) break;
                 Console.WriteLine("El: " + a);
                 if (a % 2 != 0) continue;
                 Console.WriteLine("Number {0} is even", a);
             }
         }
-        public static string UserInputString ()
+        public static string UserInputString()
         {
             Console.WriteLine("Input some text:");
             string user_input = Console.ReadLine();
@@ -150,14 +151,14 @@ namespace CS_youtube_kurs
         }
         public static string ShowName(string name)
         {
-            return "The text user has entered is: "+name;
+            return "The text user has entered is: " + name;
         }
         public static void TestArrays()
-        { 
+        {
             //string[] strArray2 = ["Monday", "Wednesday", "Saturday"];
             //string[] strArray3 = new string[] { "Monday", "Wednesday", "Saturday" };
             string[] strArray = { "Monday", "Wednesday", "Saturday" };
-            Console.WriteLine(strArray[0]+"\n");
+            Console.WriteLine(strArray[0] + "\n");
 
             for (int i = 0; i < strArray.Length; i++)
             {
@@ -165,10 +166,10 @@ namespace CS_youtube_kurs
             }
 
             int[] countChars = new int[strArray.Length];
-            for (int i = 0;i < countChars.Length; i++)
+            for (int i = 0; i < countChars.Length; i++)
             {
                 countChars[i] = strArray[i].Length;
-                Console.WriteLine(countChars[i]); 
+                Console.WriteLine(countChars[i]);
             }
             Console.WriteLine();
             //byte[] nums = new byte[4];
@@ -188,22 +189,23 @@ namespace CS_youtube_kurs
             }
             Console.WriteLine();
         }
-        public static void RandomArray ()
+        public static void RandomArray()
         {
             short[] numbers = new short[10];
             short sum = 0;
 
             Random random = new Random();
-            for(byte i=0; i<numbers.Length; i++)
+            for (byte i = 0; i < numbers.Length; i++)
             {
                 numbers[i] = Convert.ToInt16(random.Next(-15, 15));
                 Console.WriteLine("el: " + numbers[i]);
 
                 sum += numbers[i];
             }
-            Console.WriteLine("Sum: " +sum);
+            Console.WriteLine("Sum: " + sum);
         }
-        public static void nestedArray() {
+        public static void nestedArray()
+        {
             char[,] symbols = new char[2, 3];
             symbols[0, 0] = 'a';
 
@@ -214,8 +216,8 @@ namespace CS_youtube_kurs
             };
 
             symbols2[1, 2] = 0;
-            ////for()
-            //    //for()
+            //for()
+            //for()
             foreach (short el in symbols2)
             {
                 Console.WriteLine("El: " + el);
@@ -239,15 +241,15 @@ namespace CS_youtube_kurs
             //TestArrays();
             //RandomArray();
             //--------------------------------------------------------------------------
-            // Ïðèìåð èñïîëüçîâàíèÿ ìåòîäà LoopArray ñ ìàññèâîì ñòðîê
+            // ÐŸÑ€Ð¸Ð¼ÐµÑ€ Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ð½Ð¸Ñ Ð¼ÐµÑ‚Ð¾Ð´Ð° LoopArray Ñ Ð¼Ð°ÑÑÐ¸Ð²Ð¾Ð¼ ÑÑ‚Ñ€Ð¾Ðº
             //string[] stringArray = { "apple", "banana", "orange" };
             //LoopArray(stringArray);
-            // Ïðèìåð èñïîëüçîâàíèÿ ìåòîäà LoopArray ñ ìàññèâîì öåëûõ ÷èñåë
+            // ÐŸÑ€Ð¸Ð¼ÐµÑ€ Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ð½Ð¸Ñ Ð¼ÐµÑ‚Ð¾Ð´Ð° LoopArray Ñ Ð¼Ð°ÑÑÐ¸Ð²Ð¾Ð¼ Ñ†ÐµÐ»Ñ‹Ñ… Ñ‡Ð¸ÑÐµÐ»
             //int[] intArray = { 1, 2, 3, 4, 5 };
             //LoopArray(intArray);
             //--------------------------------------------------------------------------
 
-            //äâóõìåðíûå ìàññèâû:
+            //Ð´Ð²ÑƒÑ…Ð¼ÐµÑ€Ð½Ñ‹Ðµ Ð¼Ð°ÑÑÐ¸Ð²Ñ‹:
             nestedArray();
 
 
